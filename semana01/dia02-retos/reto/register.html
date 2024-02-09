@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reto: Formulario de registro</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css"
+    />
+<!-- TODO: Crear un formulario para crear un acuenta de usuario con los campos nombres, apellidos, email, telefono, password, confirmar password(caja de texto), si gustan pueden agregar más campos. Y un botón llamado registrarse. Opcionalmente pueden usar el framework PICO que vimos en clase. -->
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <form>
+      <fieldset>
+        <label for="name"
+          >Name
+          <input
+            type="text"
+            id="name"
+            placeholder="Ingrese su nombre"
+            required
+          />
+        </label>
+
+        <label for="last_name"
+          >Last name
+          <input
+            type="text"
+            id="last_name"
+            placeholder="Ingrese su apellidos"
+            required
+          />
+        </label>
+
+        <label for="sexo">sexo</label>
+
+        <label for="M">
+          <input type="radio" id="M" value="M" name="sexo" />
+          Masculino
+        </label>
+
+        <label for="F">
+          <input type="radio" id="F" value="M" name="sexo" />
+          Femenino
+        </label>
+
+        <label for="email"
+          >email
+          <input type="email" id="email" required />
+        </label>
+
+        <label for="telefono"
+          >telefono
+          <input type="tel" id="telefono" />
+        </label>
+
+        <label for="date"
+          >fecha de nacimiento
+          <input type="date" id="date" />
+        </label>
+
+        <label for="password"
+          >password
+          <input type="password" id="password" required />
+        </label>
+
+        <label for="confirm_passowrd"
+          >Confirm password
+          <input type="password" name="" id="confirm_passowrd" />
+        </label>
+
+        <input type="submit" value="Guardar" />
+        <input type="reset" value="Limpiar" />
+      </fieldset>
+    </form>
+  </body>
+</html>
