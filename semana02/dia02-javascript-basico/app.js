@@ -215,6 +215,16 @@ const result = Math.pow(suma3cifras, 3);
 // SOCIO A = 30%, SOCIO B = 20%, SOCIO C = 60%
 
 const dinero = 200;
+const socioA =0, socioB = 0, socioC = 0;
+
+socioA = dinero*0.3;
+socioB = dinero*0.2;
+socioC = dinero*0.6;
+
+console.log("Monto para el socio A: ${socioA}")
+console.log("Monto para el socio B: ${socioB}")
+console.log("Monto para el socio C: ${socioC}")
+
 
 
 
