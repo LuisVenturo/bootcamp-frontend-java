@@ -70,13 +70,7 @@ main .content{
 
 }
 
-.content__buttom{
-    height: 3rem;
-    border-radius: 8px;
-    border: none;
-    color: var(--White);
-    background-color: var(--Dark-Slate-Grey);
-}
+
 
 form label{
     font-size: 13px;
@@ -103,4 +97,17 @@ form input{
 .content p, ul{
     font-weight: 400;
     font-size: var(--font-size);
+}
+
+.content__buttom{
+    height: 3rem;
+    border-radius: 8px;
+    border: none;
+    color: var(--White);
+    background-color: var(--Dark-Slate-Grey);
+    cursor: pointer;
+}
+
+.content__buttom:hover{
+    background-color: var(--Charcoal-Grey);
 }
