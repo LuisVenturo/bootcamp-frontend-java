@@ -108,4 +108,79 @@ console.log(miObjeto.cursos[1])
 console.log(miObjeto.cursos[1].nombre) //Algoritmo
 console.log(miObjeto.cursos[1]['nota']) //20
 
-//ELIMINAR PROPIEDADES DE UN OBJETO
+// ELIMINAR PROPIEDADES DE UN OBJETO
+
+console.log(miObjeto)
+delete miObjeto.colorFavorito
+console.log(miObjeto)
+
+// INSERTAR UNA NUEVA PROPEDAD A UN OBJETO
+
+miObjeto.platoFavorito = 'Ceviche de Conchas Negras'
+miObjeto['juegos favoritos'] = ['Crash Team Racing', 'Mario', 'Minecraft']
+
+console.log(miObjeto)
+
+// DESTRUCTURING
+
+// Una forma de extraer las propiedade/elemetos de un objeto o un arreglo en variables
+
+// DESTRUCTURING PARA OBJETOS
+
+const nombreValue = miObjeto.nombre
+const apellidoValue = miObjeto.apellido
+const cursosValue = miObjeto.cursos
+
+console.log(nombreValue, apellidoValue, cursosValue)
+
+const { nombre, apellido, coloresFavoritos } = miObjeto
+
+console.log(nombre, apellido, coloresFavoritos)
+
+const { nombre: nombreValor , apellido: apellidoValor } = miObjeto
+
+console.log(nombreValor, apellidoValor)
+
+// DESTRUCTURING PARA ARREGLOS
+
+const amigos = ['laura', 'edison', 'abel', 'irvin', 'brayan']
+
+const [amigo1, amigo2, , , amigo3] = amigos
+
+console.log(amigo1, amigo2, amigo3)
+
+// SPREAD OPERATOS (operador ...)
+
+// Extrae propiedades de un objeto/arreglo para reutilizar en otros objetos/arreglos
+
+const producto = {
+  nombre: 'Laptop',
+  precio: 6800,
+  categoria: 'tech'
+}
+
+const cliente = {
+  nombre: 'Laura',
+  isVip: true
+}
+
+console.log(producto + cliente) // [object Object][object Object] ❌
+
+const nuevoObjeto = { ...producto, ...cliente }
+
+console.log(nuevoObjeto)
+
+// SPREAD OPERATOR EVITANDO COLISIONES
+
+const nuevoObjetoSinColisiones = {
+  producto: { ...producto },
+  cliente: { ...cliente },
+}
+
+console.log(nuevoObjetoSinColisiones)
+
+// OTROS MÉTODOS DE OBJETOS
+
+console.log(Object.keys(producto)) // Obtenemos solo las claves(keys) del objeto
+console.log(Object.values(producto)) // Obtenemos solo los valores(values) del objeto
+console.log(Object.entries(producto)) // Convertimos un objeto en arreglo
